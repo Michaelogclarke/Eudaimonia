@@ -2,11 +2,35 @@ import { Link } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { View, Text, Pressable } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import {
+  GestureHandlerRootView,
+  TouchableOpacity,
+} from "react-native-gesture-handler";
+import { Header } from "react-native/Libraries/NewAppScreen";
+
 const Michaelog = () => {
   return (
-    <View style={{ backgroundColor: "blue", height: 100, width: 100 }}>
-      <Text>Beth smells, Lovely</Text>
+    <View
+      style={{
+        backgroundColor: "blue",
+        height: 100,
+        width: 100,
+        left: 20,
+        top: 20,
+      }}
+    >
+      <GestureHandlerRootView
+        style={{
+          backgroundColor: "white",
+          top: 100,
+        }}
+      >
+        <TouchableOpacity>
+          <Text href="/home">John</Text>
+        </TouchableOpacity>
+      </GestureHandlerRootView>
+
+      <Text></Text>
       <StatusBar style="auto" />
       <View
         style={{
@@ -14,15 +38,14 @@ const Michaelog = () => {
           height: 100,
           width: 100,
           left: 100,
-          bottom: 34,
         }}
       >
-        <Text>HEllo</Text>
+        <Text>Red box</Text>
       </View>
       <View>
-        <Link href="/home" style={{ color: "blue" }}>
+        {/* <Link href="/home" style={{ color: "blue" }}>
           home
-        </Link>
+        </Link> */}
       </View>
     </View>
   );
